@@ -73,6 +73,7 @@ nav{
 /* Estilos de la sección Hero, conteniendo div e imagenes de la sección principal, dividida básicamente en dos mitades con una imagen de fondo que ocupe todo el espacio, hasta un punto, que se explican más abajo. */
 .hero{
     height: 100vh;
+    min-height: 860px;
     max-height: 1080px; /* Quiero que el contenido no crezca infinitamente en lo alto, en monitores de muy alta resoulución */
     background: url(../imgs/bg.jpg) #F5EEE2 center center no-repeat;
     background-size: cover;
@@ -93,7 +94,7 @@ nav{
 }
 
 .hero-max-w {
-    width: 100%;
+    width: 90%;
     max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
     margin: 0 auto;
     height: 90%;
@@ -165,31 +166,78 @@ button .down-chevron{
 
 /* Sección siguiente, de contenido en la página */
 .content{
-    height: 2000px;
     background-color: var(--main-beige);
     padding: 90px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.content-max-w {
+.content-w{
     width: 100%;
-    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
-    margin: 0 auto;
 }
 
 .content h2{
     text-align: center;
+    margin-bottom: 40px;
+}
+
+.scrolling-wrapper-flexbox{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 20px 0px 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-wrapper-flexbox:last-child{
+    margin-bottom: 90px;
+}
+
+.scrolling-wrapper-flexbox .montadito-card{
+    flex: 0 0 auto;
+}
+
+.scrolling-wrapper-flexbox .montadito-card:not(:last-child){
+    margin-right: 20px;
+}
+
+.montadito-card{
+    width: 350px;
+    height: 350px;
+    border-radius: 12px;
+    background: var(--main-white);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+}
+
+.scrolling-wrapper-flexbox::-webkit-scrollbar{
+    display: none;
+}
+/* --- */
+
+/* Sección siguiente, pre-footer en la página */
+.call-to-action{
+    background-color: var(--main-beige);
+    padding: 0 0 90px;
+}
+
+.call-to-action-max-w{
+    width: 90%;
+    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
+    margin: 0 auto;
+    background-color: var(--main-white);
+    border-radius: 12px;
 }
 /* --- */
 
 /* Sección siguiente, pre-footer en la página */
 .pre-footer{
-    height: 450px;
     background-color: var(--main-black);
     padding: 180px 0 90px;
 }
 
 .pre-footer-max-w {
-    width: 100%;
+    width: 90%;
     max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
     margin: 0 auto;
 }
@@ -201,13 +249,12 @@ button .down-chevron{
 
 /* Sección siguiente, footer en la página */
 .footer{
-    height: 84px;
     background-color: var(--dark-black);
-    padding: 30px;
+    padding: 30px 0;
 }
 
 .footer-max-w {
-    width: 100%;
+    width: 90%;
     max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
     margin: 0 auto;
 }
