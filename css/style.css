@@ -4,35 +4,50 @@
     box-sizing: border-box
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Variables con los colores para reusarlas */
 :root {
-    --main-black: #333333;
+    --main-black: #333;
+    --dark-black: #000;
     --main-red: #CB4A4A;
     --main-white: #fff;
     --main-beige: #F5EEE2;
-  }
+}
+/* --- */
 
-/* Estilos generales para poder reusarlos en el sitio */
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: var(--main-black);
 }
 
+/* Estilos "generales" para poder reusarlos en el sitio */
 h1{
     font-size: 3em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+h2{
+    font-size: 2.5em;
+    font-weight: 700;
     line-height: 1;
 }
 
 button{
     appearance: none;
     -webkit-appearance: none;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     cursor: pointer;
     border: none;
-    height: 70px;
+    height: 80px;
     background-color: var(--main-red);
     color: var(--main-white);
-    font-size: 18px;
-    padding: 10px 32px;
+    font-size: 1.2em;
+    padding: 10px 50px;
     border-radius: 70px;
 }
 
@@ -40,7 +55,9 @@ a{
     text-decoration: underline;
     color: var(--main-red);
 }
+/* --- */
 
+/* Estilos para el header que se oculta y se muestra de acuerdo al scroll*/
 nav{
     width: 100%;
     background-color: var(--main-white);
@@ -51,62 +68,154 @@ nav{
 .logoNav{
     margin: 0 auto;
 }
+/* --- */
 
-/* Estilos de la seccion Hero, conteniendo div e imagenes */
-section.hero{
-    height: 90vh;
+/* Estilos de la sección Hero, conteniendo div e imagenes de la sección principal, dividida básicamente en dos mitades con una imagen de fondo que ocupe todo el espacio, hasta un punto, que se explican más abajo. */
+.hero{
+    height: 100vh;
+    max-height: 1080px; /* Quiero que el contenido no crezca infinitamente en lo alto, en monitores de muy alta resoulución */
     background: url(../imgs/bg.jpg) #F5EEE2 center center no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-div.heroContent{
+.hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-image: linear-gradient(to top, var(--main-beige), transparent); /* Este es un gradiente que se pondrá sobre la img de fondo, abajo, para crear una transición al resto del sitio */
+}
+
+.hero-max-w {
+    width: 100%;
+    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1; /* Necesito especificar esto por el gradiente al acabar la sección de HERO */
+}
+
+.hero-content {
     background-color: var(--main-white);
     border-radius: 12px;
+    padding: 4% 8% 2%;
     width: 50%;
-    height: 80%;
-    margin: 20px 0 20px 20px;
-    padding: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+ }
+
+.hero-upper{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
-div.heroCtUpper{
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+.logo-hero{
+    width: 100%;
+    max-height: 162px; /* Para hacer que el logo elástico. Y que crezca hasta un punto */
+}
+
+.hero-upper button{
+    margin-top: 60px;
 }
 
 .divider{
     height: 1px;
     width: 100%;
+    margin: 50px auto;
     background-color: var(--main-black);
     opacity: 15%;
 }
 
-div.heroCtLower{
-    height: 10%;
+.hero-lower{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
 }
 
-.btnMore{
-    height: 60px;
+button.btn-more{
+    height: 100%; /* Esta altura es para mantener la misma interacción tanto en texto como en img */
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-a.fillDiv {
-    height: 100%;
-    width: 100%;
+button a{
+    color: var(--main-black);
 }
 
+button .down-chevron{
+    display: block;
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+}
+/* --- */
+
+/* Sección siguiente, de contenido en la página */
+.content{
+    height: 2000px;
+    background-color: var(--main-beige);
+    padding: 90px 0;
+}
+
+.content-max-w {
+    width: 100%;
+    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
+    margin: 0 auto;
+}
+
+.content h2{
+    text-align: center;
+}
+/* --- */
+
+/* Sección siguiente, pre-footer en la página */
+.pre-footer{
+    height: 450px;
+    background-color: var(--main-black);
+    padding: 180px 0 90px;
+}
+
+.pre-footer-max-w {
+    width: 100%;
+    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
+    margin: 0 auto;
+}
+
+.pre-footer-content{
+    color: var(--main-white);
+}
+/* --- */
+
+/* Sección siguiente, footer en la página */
+.footer{
+    height: 84px;
+    background-color: var(--dark-black);
+    padding: 30px;
+}
+
+.footer-max-w {
+    width: 100%;
+    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
+    margin: 0 auto;
+}
+
+.footer-content{
+    color: var(--main-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* --- */

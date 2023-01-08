@@ -6,39 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿Qué montadito quieres hoy?</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- En header van los elementos con la intención de tener el fondo de img y después poner el div en la mitad de la izq -->
     <nav>
-        <div class="logoNav">
-            <img class="logoNav" src="" alt="Logo Nav">
+        <div class="logo-nav">
+            <img class="logo-nav" src="" alt="Logo Nav">
         </div>
     </nav>
     <section class="hero">
-        <div class="heroContent">
-            <div class="heroCtUpper">
-                <img class="logoHero" src="" alt="Logo Hero section">
-                <div class="divider"></div>
-                <h1>¿Y tú, ya sabes qué montadito te vas a  comer hoy?</h1>
-                <button>Quiero que el destino elija por mí</button>
-            </div>
-<!-- Incluyo un img para mostrar un svg con la flecha hacia abajo. Con una interacción en todo el elemento -->
-            <div class="heroCtLower">
-                <div class="btnMore">
-                    <a href="#" class="fillDiv">Ver todas las opciones de montaditos</a>
-                    <img class="downChevron" src="" alt="Down chevron">
+        <div class="hero-max-w">
+            <div class="hero-content">
+                <div class="hero-upper">
+                    <img class="logo-hero" src="imgs/logoHero.svg" alt="Logo Hero section">
+                    <div class="divider"></div>
+                    <h1>¿Y tú, ya sabes qué montadito te vas a  comer hoy?</h1>
+                    <button>Quiero que el destino elija por mí</button>
+                </div>
+    <!-- Incluyo un img para mostrar un svg con la flecha hacia abajo. Con una interacción en todo el elemento -->
+                <div class="hero-lower">
+                    <button class="btn-more">
+                        <a href="#opciones">Ver todas las opciones de montaditos</a>
+                        <img class="down-chevron" src="imgs/downChevron.svg" alt="Down chevron">
+                    </button>
                 </div>
             </div>
         </div>
     </section>
-    <section class="content">
-
+    <section id="opciones" class="content">
+        <div class="content-max-w">
+            <h2>Son muchas opciones para elegir...</h2>
+        </div>
     </section>
-    <section class="preFooter">
-
+    <section class="pre-footer">
+        <div class="pre-footer-max-w">
+            <div class="pre-footer-content">
+                <h2>100 Montaditos</h2>
+            </div>
+        </div>
     </section>
     <section class="footer">
-
+        <div class="footer-max-w">
+            <div class="footer-content">
+                <p>2023 © Gustavo Sevilla. Todos los derechos reservados.</p>
+                <p>2023 © Gustavo Sevilla. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </section>
 </body>
 </html>
