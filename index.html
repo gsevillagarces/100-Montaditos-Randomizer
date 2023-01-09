@@ -12,12 +12,15 @@
 </head>
 <body>
 <!-- En header van los elementos con la intención de tener el fondo de img y después poner el div en la mitad de la izq -->
-    <nav>
+    <nav id="navbar">
         <div class="logo-nav">
-            <img class="logo-nav" src="" alt="Logo Nav">
+            <a href="#top">
+                <img class="logo-nav" src="imgs/logoNav.svg" alt="Logo nav" title="Volver al tope">
+            </a>
         </div>
     </nav>
-    <section class="hero">
+
+    <section class="hero" id="top">
         <div class="hero-max-w">
             <div class="hero-content">
                 <div class="hero-upper">
@@ -89,17 +92,50 @@
     <section class="pre-footer">
         <div class="pre-footer-max-w">
             <div class="pre-footer-content">
-                <h2>100 Montaditos</h2>
+                <div class="col1">
+                    <h3>100 Montaditos</h3>
+                    <ul>
+                        <li><a href="#">Carta</a></li>
+                        <li><a href="#">Encuéntranos</a></li>
+                        <li><a href="#">Elige tu montadito</a></li>
+                    </ul>
+                </div>
+                <div class="col2">
+                    <h3>Nosotros</h3>
+                    <ul>
+                        <li><a href="#">Nuestra historia</a></li>
+                        <li><a href="#">Nuestros ingredientes</a></li>
+                        <li><a href="#">Abre tu 100M</a></li>
+                    </ul>
+                </div>
+                <div class="col3">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="#">info@100montaditos.com</a></li>
+                        <li><a href="#">Abre tu 100M</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col4">
+                    <h3>Síguenos en</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
     <section class="footer">
         <div class="footer-max-w">
             <div class="footer-content">
-                <p>2023 © Gustavo Sevilla. Todos los derechos reservados.</p>
-                <p>Maquetación realizada para la clase de Diseño Web con HTML5, CSS3 y JavaScript. CEI Madrid.</p>
+                <p>2023 © <a href="https://gustavosevilla.com" target="_blank" title="Gustavo Sevilla | Diseñador UX, UI, Web y Multimedia">Gustavo Sevilla</a>. Todos los derechos reservados.</p>
+                <p>Maquetación realizada para la clase de Diseño Web con HTML5, CSS3 y JavaScript. <a href="https://cei.es" target="_blank">CEI Madrid.</a></p>
             </div>
         </div>
     </section>
+
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
