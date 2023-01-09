@@ -1,3 +1,5 @@
+// En este primer script, se muestra el navbar de acuerdo al scroll del usuario. Este navbar inicia oculto, y se muestra, con una pequeña transición dada en el css, si el usuario hace un scroll mayor a 50px.
+
 const nav = document.getElementById("navbar")
 
 function scrollFunction() {

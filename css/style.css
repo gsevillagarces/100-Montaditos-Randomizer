@@ -157,21 +157,16 @@ nav img{
 }
 
 button.btn-more{
-    height: 100%; /* Esta altura es para mantener la misma interacción tanto en texto como en img */
     background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
-button a{
+button.btn-more a{
     color: var(--main-black);
 }
 
 button .down-chevron{
     display: block;
-    margin-top: 10px;
+    margin: 10px auto;
     height: 40px;
     width: 40px;
 }
