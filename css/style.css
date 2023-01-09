@@ -12,11 +12,19 @@ html{
 :root{
     --main-black: #333;
     --dark-black: #000;
+    --dark-black-dimmed: rgba(0, 0, 0, 0.5);    
     --dark-gray: #707070;
     --main-red: #CB4A4A;
     --main-white: #fff;
-    --main-whitedimmed: rgba(255, 255, 255, 0.9);
+    --main-white-dimmed: rgba(255, 255, 255, 0.9);
     --main-beige: #F5EEE2;
+}
+/* --- */
+
+/* Un toque de personalización */
+::selection{
+    background-color: var(--main-red);
+    color: var(--main-white);
 }
 /* --- */
 
@@ -45,15 +53,28 @@ button{
     appearance: none;
     -webkit-appearance: none;
     font-family: 'Rubik', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
     border: none;
-    height: 80px;
     background-color: var(--main-red);
     color: var(--main-white);
     font-size: 1.2em;
-    padding: 10px 50px;
+    padding: 22px 50px;
     border-radius: 70px;
+    display: flex; /* Esto para centrar el span con el texto, el span contiene un emoji que después se cambia de tamaño */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+}
+
+button:hover{
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+}
+
+button span{
+    font-size: 1.5em;
+    margin-left: 5px;
 }
 
 a{
@@ -62,12 +83,26 @@ a{
 }
 /* --- */
 
+/* Clases que se usarán para animar elemento al hacer scroll*/
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/* --- */
+
 /* Estilos para el header que se oculta y se muestra de acuerdo al scroll*/
 nav{
     z-index: 2;
     width: 100%;
     padding: 25px;
-    background-color: var(--main-whitedimmed);
+    background-color: var(--main-white-dimmed);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
     position: fixed;
     top: -115px;
@@ -157,7 +192,9 @@ nav img{
 }
 
 button.btn-more{
-    background-color: transparent;
+    background-color: transparent; /* Es necesario sobreescribir el color de fondo, la sombra y el padding de este botón en específico, ya que no es un btn primario */
+    box-shadow: none;
+    padding: 0;
 }
 
 button.btn-more a{
@@ -167,6 +204,7 @@ button.btn-more a{
 button .down-chevron{
     display: block;
     margin: 10px auto;
+    margin-bottom: 0;
     height: 40px;
     width: 40px;
 }
@@ -334,40 +372,67 @@ button .down-chevron{
 }
 /* --- */
 
-
-/* The Modal (background) */
+/* Acá estarían los estilos del modal, iniciando con el "fondo" del mismo*/
 .modal{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: block;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: var(--dark-black-dimmed);
 }
-  
-  /* Modal Content/Box */
+
 .modal-content{
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 90%;
+    max-width: 730px;
+    background-color: var(--main-beige);
+    border-radius: 12px;
+    margin: 12% auto; /* Para centrar al modal dentro de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    position: relative;
 }
-  
-  /* The Close Button */
-.close-modal{
+
+.modal-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
     opacity: 1;
-    float: right;
     font-size: 28px;
-    font-weight: bold;
 }
-  
-.close-modal:hover,
-.close-modal:focus{
+
+.modal-close:hover,
+.modal-close:focus{
     opacity: 0.9;
     cursor: pointer;
+    transform: translateY(-1px) scale(1.1);
+}
+
+.montadito-circle{
+    width: 300px;
+    height: 300px;
+    background-color: var(--main-white);
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.modal p{
+    color: var(--dark-black-dimmed);
+    opacity: 0.5;
+}
+
+.modal h2{
+    font-size: 3.4em;
+    margin-top: 15px;
 }

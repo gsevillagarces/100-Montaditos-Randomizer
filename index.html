@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Qué montadito quieres hoy?</title>
+    <title>&#129386; ¿Qué montadito quieres hoy? &#129386;</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
                     <img class="logo-hero" src="imgs/logoHero.svg" alt="Logo Hero section">
                     <div class="divider"></div>
                     <h1>¿Y tú, ya sabes qué montadito te vas a  comer hoy?</h1>
-                    <button class="btnModal">Quiero que el destino elija por mí</button>
+                    <button class="btnModal">Que el destino elija por mí <span class="emoji">&#129310;</span></button>
                 </div>
                 <div class="hero-lower">
                     <button class="btn-more">
@@ -43,9 +43,9 @@
 
 <!-- Sección con el "mosaico de opciones" de montaditos -->
     <section id="opciones" class="content">
-        <div class="content-w">
+        <div class="content-w reveal">
             <h2>Son muuuuuchas opciones para elegir...</h2>
-            <div class="scrolling-wrapper-flexbox">
+            <div class="scrolling-wrapper-flexbox reveal">
                 <div class="montadito-card"></div>
                 <div class="montadito-card"></div>
                 <div class="montadito-card"></div>
@@ -54,7 +54,7 @@
                 <div class="montadito-card"></div>
                 <div class="montadito-card"></div>
             </div>
-            <div class="scrolling-wrapper-flexbox">
+            <div class="scrolling-wrapper-flexbox reveal">
                 <div class="montadito-card"></div>
                 <div class="montadito-card"></div>
                 <div class="montadito-card"></div>
@@ -63,7 +63,7 @@
                 <div class="montadito-card"></div>
                 <div class="montadito-card"></div>
             </div>
-            <div class="scrolling-wrapper-flexbox">
+            <div class="scrolling-wrapper-flexbox reveal">
                 <div class="montadito-card"></div>
                 <div class="montadito-card"></div>
                 <div class="montadito-card"></div>
@@ -77,10 +77,10 @@
 
  <!-- Sección con un pequeño call to action para invocar el modal con el randomize -->
     <section class="call-to-action">
-        <div class="call-to-action-max-w">
+        <div class="call-to-action-max-w reveal">
             <div class="call-left">
                 <h2>¿Te ha costado decidirte por uno?</h2>
-                <button class="btnModal">Quiero que el destino elija por mí</button>
+                <button class="btnModal">Que el destino elija por mí <span class="emoji">&#129310;</span></button>
             </div>
             <div class="call-right">
                 <img src="imgs/montadito-call-to-action.png" alt="Montadito botón">
@@ -89,7 +89,7 @@
     </section>
 <!-- Sección donde se concentran links varios, divididos en columnas, que podrían ser más o menos, sin afectar los estilos y lectura de sus contenidos -->
     <section class="pre-footer">
-        <div class="pre-footer-max-w">
+        <div class="pre-footer-max-w reveal">
             <div class="pre-footer-content">
                 <div class="col1">
                     <h3>100 Montaditos</h3>
@@ -138,17 +138,21 @@
 
 <!-- Modal con el principal feature de la página: el montadito randomizado -->
 <div class="modal">
-
-  <!-- Modal content -->
     <div class="modal-content">
-        <div class="close-modal">
+        <div class="modal-close">
             <img src="imgs/closeModal.svg" alt="Cerrar">
         </div>
+        <h1 class="modal-title">Invocando a la suerte...</h1>
+        <div class="montadito-circle">
+            <img class="img-montadito" src="imgs/montadito1.png" alt="Montadito elegido">
+            <p>Imagen referencial</p>
+            <h2>#23</h2>
+        </div>
+        <button>Volver a empezar</button>
     </div>
 
 </div>
 
-    
-    <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
