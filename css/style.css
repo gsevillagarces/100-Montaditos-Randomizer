@@ -12,7 +12,7 @@ html{
 :root{
     --main-black: #333;
     --dark-black: #000;
-    --dark-black-dimmed: rgba(0, 0, 0, 0.5);    
+    --dark-black-dimmed: rgba(0, 0, 0, 0.65);    
     --dark-gray: #707070;
     --main-red: #CB4A4A;
     --main-white: #fff;
@@ -376,7 +376,7 @@ button .down-chevron{
 .modal{
     display: block;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
