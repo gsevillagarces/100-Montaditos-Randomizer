@@ -12,6 +12,7 @@ html{
 :root {
     --main-black: #333;
     --dark-black: #000;
+    --dark-gray: #707070;
     --main-red: #CB4A4A;
     --main-white: #fff;
     --main-beige: #F5EEE2;
@@ -167,7 +168,7 @@ button .down-chevron{
 /* Sección siguiente, de contenido en la página */
 .content{
     background-color: var(--main-beige);
-    padding: 90px 0;
+    padding: 90px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,25 +216,44 @@ button .down-chevron{
 }
 /* --- */
 
-/* Sección siguiente, pre-footer en la página */
+/* Sección siguiente, call to action en la página */
 .call-to-action{
     background-color: var(--main-beige);
-    padding: 0 0 90px;
+    padding: 0;
 }
 
 .call-to-action-max-w{
     width: 90%;
+    padding: 2% 6%;
     max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
     margin: 0 auto;
     background-color: var(--main-white);
     border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
+
+.call-left h2{
+    margin-bottom: 30px;
+}
+
+.call-right img{
+    width: 100%;
+    max-width: 500px;
+    max-height: 350px;
+}
+
 /* --- */
 
 /* Sección siguiente, pre-footer en la página */
 .pre-footer{
     background-color: var(--main-black);
     padding: 180px 0 90px;
+    margin-top: -60px;
+    position: relative;
 }
 
 .pre-footer-max-w {
@@ -260,7 +280,7 @@ button .down-chevron{
 }
 
 .footer-content{
-    color: var(--main-white);
+    color: var(--dark-gray);
     display: flex;
     justify-content: space-between;
     align-items: center;
