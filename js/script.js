@@ -3,8 +3,6 @@
 const nav = document.getElementById("navbar");
 let navbarH = nav.getBoundingClientRect().height;
 
-console.log(`-${navbarH}px`);
-
 function showNav() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) { //50 es el número de px que deben darse con el scroll para que se muestre el elemento
     nav.style.top = "0";

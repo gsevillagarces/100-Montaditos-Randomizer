@@ -36,6 +36,7 @@ body{
 /* Estilos "generales" para poder reusarlos en el sitio */
 h1{
     font-size: 3em;
+    line-height: 1.1;
     font-weight: 700;
 }
 
@@ -120,7 +121,7 @@ nav img{
 
 /* Estilos de la sección Hero, conteniendo div e imagenes de la sección principal, dividida básicamente en dos mitades con una imagen de fondo que ocupe todo el espacio, hasta un punto, que se explican más abajo. */
 .hero{
-    height: 100vh;
+    height: 90vh;
     min-height: 860px;
     max-height: 1080px; /* Quiero que el contenido no crezca infinitamente en lo alto, en monitores de muy alta resoulución */
     background: url(../imgs/bg.jpg) #F5EEE2 center center no-repeat;
@@ -152,7 +153,7 @@ nav img{
 .hero-content{
     background-color: var(--main-white);
     border-radius: 12px;
-    padding: 4% 8% 2%;
+    padding: 60px 8% 2%;
     width: 50%;
     height: 100%;
     display: flex;
@@ -179,7 +180,7 @@ nav img{
 .divider{
     height: 1px;
     width: 100%;
-    margin: 50px auto;
+    margin: 40px auto;
     background-color: var(--main-black);
     opacity: 15%;
 }
@@ -224,11 +225,13 @@ button .down-chevron{
 }
 
 .content h2{
+    width: 90%;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 0 auto;
 }
 
 .scrolling-wrapper-flexbox{
+    margin-top: 40px ;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -374,7 +377,7 @@ button .down-chevron{
 
 /* Acá estarían los estilos del modal, iniciando con el "fondo" del mismo*/
 .modal{
-    display: block;
+    display: none;
     position: fixed;
     z-index: 3;
     left: 0;
@@ -433,6 +436,199 @@ button .down-chevron{
 }
 
 .modal h2{
-    font-size: 3.4em;
+    font-size: 2.6em;
     margin-top: 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 961px){
+    /* body{
+        color: red;
+    } */
+
+    .hero-content {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .logo-hero {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .montadito-card{
+        width: 320px;
+        height: 320px;
+    }
+
+    .call-to-action-max-w {
+        padding: 8% 6%;
+    }
+    
+    .pre-footer-content {
+        flex-wrap: wrap;
+        row-gap: 60px;
+    }
+
+    .pre-footer-content > * {
+        flex-basis: 50%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
+        text-align: center;
+    }
+
+    .footer-content{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px; /* Para facilitar el espaciado entre rows y/o columns, se puede usar gap (https://developer.mozilla.org/en-US/docs/Web/CSS/gap) */
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 641px){
+    /* body{
+        color: blue;
+    } */
+    
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2{
+        font-size: 2em;
+        line-height: 1.1;
+    }
+
+    button{
+        font-size: 1.1em;
+    }
+
+    .hero-content {
+        width: 100%
+    }
+
+    .logo-hero {
+        width: 80%;
+    }
+
+    .hero-content h1{
+        text-align: center;
+    }
+
+    .hero-upper{
+        align-items: stretch;
+    }
+
+    .scrolling-wrapper-flexbox {
+        margin-top: 20px;
+    }
+ 
+    .montadito-card{
+        width: 300px;
+        height: 300px;
+    }
+
+    .scrolling-wrapper-flexbox:last-child {
+        margin-bottom: 50px;
+        padding-bottom: 20px;
+    }
+
+    .call-to-action-max-w {
+        padding: 8%;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .call-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call-left h2 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    .pre-footer{
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+
+    .pre-footer-content ul li:first-child {
+        margin-top: 20px;
+    }
+
+    .pre-footer-content > * {
+        flex-basis: 100%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 320px){
+    /* body{
+        color: yellow;
+    } */
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    button{
+        font-size: 1em;
+    }
+
+    nav{
+        padding: 16px;
+    }
+
+    .logo-nav{
+        width: 50%;
+        margin: 0 auto;    
+    }
+
+    .hero{
+        height: 75vh;
+    }
+
+    .divider{
+        margin: 30px auto;
+    }
+
+    .logo-hero {
+        width: 60%;
+    }
+
+    .btnModal span{
+        display: none;
+    }
+
+    .content{
+        padding-top: 60px;
+    }
+
+    .scrolling-wrapper-flexbox {
+        margin-top: 0;
+    }
+
+    .montadito-card{
+        width: 100%;
+    }
+
+    .scrolling-wrapper-flexbox .montadito-card:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .scrolling-wrapper-flexbox:last-child {
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+    }
+
+    .footer-content p{
+        font-size: 0.9em;
+    }
 }
