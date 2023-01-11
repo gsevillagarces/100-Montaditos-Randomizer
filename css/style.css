@@ -1,13 +1,12 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-size: 15px;
 }
-
 html{
     scroll-behavior: smooth;
 }
-
 /* Variables con los colores para reusarlas */
 :root{
     --main-black: #333;
@@ -31,25 +30,22 @@ html{
 body{
     font-family: 'Rubik', sans-serif;
     color: var(--main-black);
+    background-color: var(--main-beige);
 }
-
 /* Estilos "generales" para poder reusarlos en el sitio */
 h1{
-    font-size: 2.5em;
+    font-size: 3rem;
     line-height: 1;
     font-weight: 700;
 }
-
 h2{
-    font-size: 2em;
+    font-size: 2.5rem;
     font-weight: 700;
 }
-
 h3{
-    font-size: 1.5em;
+    font-size: 2rem;
     font-weight: 700;
 }
-
 button{
     appearance: none;
     -webkit-appearance: none;
@@ -59,7 +55,7 @@ button{
     border: none;
     background-color: var(--main-red);
     color: var(--main-white);
-    font-size: 1em;
+    font-size: 1rem;
     padding: 20px 40px;
     border-radius: 36px;
     display: flex; /* Esto para centrar el span con el texto, el span contiene un emoji que después se cambia de tamaño */
@@ -67,17 +63,14 @@ button{
     justify-content: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
 }
-
 button:hover{
     transform: translateY(-1px) scale(1.005);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
 }
-
 button span{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-left: 5px;
 }
-
 a{
     text-decoration: underline;
     color: var(--main-red);
@@ -91,7 +84,6 @@ a{
   opacity: 0;
   transition: 1s all ease;
 }
-
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
@@ -102,7 +94,7 @@ a{
 nav{
     z-index: 2;
     width: 100%;
-    padding: 25px;
+    padding: 20px;
     background-color: var(--main-white-dimmed);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
     position: fixed;
@@ -112,9 +104,14 @@ nav{
     align-items: center;
     transition: top 0.25s ease-in;
 }
-
+.logo-nav{
+    width: 100%;
+}
 nav img{
+    width: 80%;
+    max-height: 50px;
     display: block;
+    margin: 0 auto;
     cursor: pointer;
 }
 /* --- */
@@ -127,11 +124,12 @@ nav img{
     background: url(../imgs/bg.jpg) #F5EEE2 center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-color: red;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
-
 .hero::before{
     content: "";
     position: absolute;
@@ -141,42 +139,45 @@ nav img{
     height: 30%;
     background-image: linear-gradient(to top, var(--main-beige), transparent); /* Este es un gradiente que se pondrá sobre la img de fondo, abajo, para crear una transición al resto del sitio */
 }
-
 .hero-max-w{
     width: 90%;
-    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
-    margin: 0 auto;
-    height: 90%;
+    height: 100%;
+    max-width: 1140px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
     z-index: 1; /* Necesito especificar esto por el gradiente al acabar la sección de HERO */
+	display: flex;
 }
-
-.hero-content{
-    background-color: var(--main-white);
-    border-radius: 12px;
-    padding: 60px 8% 2%;
+.hero-content {
+    border-radius: 10px;
+    padding: 90px 0;
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+}
+.left-cont{
+    padding: 60px 12% 2%;
+	background-color: var(--main-white);
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
-
 .hero-upper{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .logo-hero{
-    width: 100%;
-    max-height: 162px; /* Para hacer que el logo elástico. Y que crezca hasta un punto */
+    width: 90%;
+    max-height: 120px; /* Para hacer que el logo elástico. Y que crezca hasta un punto */
 }
-
 .hero-upper button{
-    margin-top: 60px;
+    margin-top: 40px;
 }
-
 .divider{
     height: 1px;
     width: 100%;
@@ -184,24 +185,20 @@ nav img{
     background-color: var(--main-black);
     opacity: 15%;
 }
-
 .hero-lower{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
-
 button.btn-more{
     background-color: transparent; /* Es necesario sobreescribir el color de fondo, la sombra y el padding de este botón en específico, ya que no es un btn primario */
     box-shadow: none;
     padding: 0;
 }
-
 button.btn-more a{
     color: var(--main-black);
 }
-
 button .down-chevron{
     display: block;
     margin: 10px auto;
@@ -219,47 +216,39 @@ button .down-chevron{
     justify-content: center;
     align-items: center;
 }
-
 .content-w{
     width: 100%;
 }
-
 .content h2{
     width: 90%;
     text-align: center;
     margin: 0 auto;
 }
-
 .scrolling-wrapper-flexbox{
-    margin-top: 40px ;
+    margin-top: 10px ;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     padding: 20px 20px 0 20px;
     -webkit-overflow-scrolling: touch;
 }
-
 .scrolling-wrapper-flexbox:last-child{
     margin-bottom: 90px;
     padding-bottom: 20px;
 }
-
 .scrolling-wrapper-flexbox .montadito-card{
     flex: 0 0 auto;
 }
-
 .scrolling-wrapper-flexbox .montadito-card:not(:last-child){
     margin-right: 20px;
 }
-
 .montadito-card{
     width: 350px;
     height: 350px;
-    border-radius: 12px;
+    border-radius: 10px;
     background: var(--main-white);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
 }
-
 .scrolling-wrapper-flexbox::-webkit-scrollbar{
     display: none;
 }
@@ -270,31 +259,27 @@ button .down-chevron{
     background-color: var(--main-beige);
     padding: 0;
 }
-
 .call-to-action-max-w{
     width: 90%;
     padding: 2% 6%;
-    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
+    max-width: 1140px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
     margin: 0 auto;
     background-color: var(--main-white);
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 1;
 }
-
 .call-left h2{
     margin-bottom: 30px;
 }
-
 .call-right img{
     width: 100%;
     max-width: 500px;
     max-height: 350px;
 }
-
 /* --- */
 
 /* Sección siguiente, pre-footer en la página */
@@ -304,40 +289,32 @@ button .down-chevron{
     margin-top: -60px;
     position: relative;
 }
-
 .pre-footer-max-w{
     width: 90%;
-    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
+    max-width: 1140px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
     margin: 0 auto;
 }
-
 .pre-footer-content{
     color: var(--main-white);
     display: flex;
 }
-
 .pre-footer-content > *{
     flex-basis: 100%; /* Pequeño hack que encontré para dividir siempre en partes iguales. En este caso se pudo haber puesto un width de 25%, al tener 4 columnas, pero podrían ser 3, que automáticamente el footer-content se dividirá en 3 (https://css-tricks.com/equal-columns-with-flexbox-its-more-complicated-than-you-might-think/) */
 }
-
 .pre-footer-content ul{
     list-style: none;
 }
-
 .pre-footer-content ul li:first-child{
     margin-top: 30px;
 }
-
 .pre-footer-content ul li{
     margin-top: 20px;
 }
-
 .pre-footer-content ul a{
     text-decoration: none;
     color: var(--main-white);
     opacity: 0.75;
 }
-
 .pre-footer-content ul a:hover,
 .pre-footer-content ul a:focus{
     opacity: 1;
@@ -349,26 +326,27 @@ button .down-chevron{
     background-color: var(--dark-black);
     padding: 30px 0;
 }
-
 .footer-max-w{
     width: 90%;
-    max-width: 1640px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
+    max-width: 1140px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
     margin: 0 auto;
 }
-
 .footer-content{
-    color: var(--dark-gray);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.footer-content p{
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
 .footer-content a{
+    font-size: 0.9rem;
     text-decoration: none;
     color: var(--main-white);
     opacity: 0.75;
 }
-
 .footer-content a:hover,
 .footer-content a:focus{
     opacity: 1;
@@ -387,7 +365,6 @@ button .down-chevron{
     overflow: auto;
     background-color: var(--dark-black-dimmed);
 }
-
 .modal-content{
     width: 90%;
     max-width: 730px;
@@ -401,7 +378,6 @@ button .down-chevron{
     padding: 60px 20px;
     position: relative;
 }
-
 .modal-close{
     position: absolute;
     top: 20px;
@@ -409,14 +385,12 @@ button .down-chevron{
     opacity: 1;
     font-size: 28px;
 }
-
 .modal-close:hover,
 .modal-close:focus{
     opacity: 0.9;
     cursor: pointer;
     transform: translateY(-1px) scale(1.1);
 }
-
 .montadito-circle{
     width: 300px;
     height: 300px;
@@ -429,38 +403,32 @@ button .down-chevron{
     align-items: center;
     margin: 40px auto;
 }
-
 .modal p{
     color: var(--dark-black-dimmed);
     opacity: 0.5;
 }
-
 .modal h2{
-    font-size: 2.2em;
+    font-size: 2.2rem;
     margin-top: 15px;
     text-align: center;
 }
-
 @media screen and (max-width: 961px){
-    /* body{
+    body{
         color: red;
-    } */
+    }
 
     .hero-content {
         width: 75%;
         margin: 0 auto;
     }
-
     .logo-hero {
         width: 90%;
         margin: 0 auto;
     }
-
     .montadito-card{
         width: 320px;
         height: 320px;
     }
-
     .call-to-action-max-w {
         padding: 8% 6%;
     }
@@ -469,57 +437,46 @@ button .down-chevron{
         flex-wrap: wrap;
         row-gap: 60px;
     }
-
     .pre-footer-content > * {
         flex-basis: 50%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
         text-align: center;
     }
-
     .pre-footer-content div:not(first-child){
         padding-top: 15px;
     }
-
     .footer-content{
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
     }
-
     .footer-content p:not(first-child){
         padding-top: 10px;
     }
 }
-
 @media screen and (max-width: 641px){
-    /* body{
+    body{
         color: blue;
-    } */
+    }
     
     h1 {
-        font-size: 2.2em;
+        font-size: 2.2rem;
     }
-
     h2{
-        font-size: 2em;
+        font-size: 2rem;
         line-height: 1;
     }
-
     .hero-content {
         width: 100%
     }
-
     .logo-hero {
         width: 50%;
     }
-
     .hero-content h1{
         text-align: center;
     }
-
     .hero-upper{
         align-items: stretch;
     }
-
     .scrolling-wrapper-flexbox {
         margin-top: 20px;
     }
@@ -528,106 +485,85 @@ button .down-chevron{
         width: 300px;
         height: 300px;
     }
-
     .scrolling-wrapper-flexbox:last-child {
         margin-bottom: 50px;
         padding-bottom: 20px;
     }
-
     .call-to-action-max-w {
         padding: 8%;
         flex-direction: column;
         justify-content: space-between;
         row-gap: 30px;
     }
-
     .call-left {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
     .call-left h2 {
-        font-size: 1.8em;
+        font-size: 1.8rem;
         text-align: center;
     }
-
     .pre-footer{
         padding-top: 120px;
         padding-bottom: 40px;
     }
-
     .pre-footer-content ul li:first-child {
         margin-top: 20px;
     }
-
     .pre-footer-content > * {
         flex-basis: 100%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
         text-align: center;
     }
 }
-
 @media screen and (max-width: 320px){
-    /* body{
+    body{
         color: yellow;
-    } */
+    }
 
     h1 {
-        font-size: 2.2em;
+        font-size: 2.2rem;
     }
-
     h3 {
-        font-size: 1.2em;
+        font-size: 1.2rem;
     }
-
     nav{
         padding: 16px;
     }
-
     .logo-nav{
         width: 40%;
         margin: 0 auto;    
     }
-
     .hero{
         height: 75vh;
     }
-
     .divider{
         margin: 30px auto;
     }
-
     .logo-hero {
         width: 60%;
     }
-
     .btnModal span{
         display: none;
     }
-
     .content{
         padding-top: 60px;
     }
-
     .scrolling-wrapper-flexbox {
         margin-top: 0;
     }
-
     .montadito-card{
         width: 100%;
     }
-
     .scrolling-wrapper-flexbox .montadito-card:not(:last-child) {
         margin-right: 10px;
     }
-
     .scrolling-wrapper-flexbox:last-child {
         margin-bottom: 10px;
         padding-bottom: 20px;
     }
-
     .footer-content p{
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 }
