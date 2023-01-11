@@ -14,14 +14,12 @@ function showNav() {
 window.addEventListener("scroll", showNav);
 // ---
 
-
-
 // ::: Script para controlar el MODAL :::
 var modal = document.querySelector(".modal");
 var btn = document.querySelectorAll(".btnModal");
 var close = document.querySelector(".modal-close");
 
-btn.forEach(boton => boton.addEventListener("click", () => modal.style.display = "block")); // Abrir el modal al dar click en uno de los botones que están para esta acción 
+btn.forEach(boton => boton.addEventListener("click", () => modal.style.display = "flex")); // Abrir el modal al dar click en uno de los botones que están para esta acción 
 
 close.addEventListener("click", () => modal.style.display = "none"); // Cerrar el modal al dar click en el botón (X)
 
@@ -31,8 +29,6 @@ window.addEventListener("click", (e) => {
     }
 });
 // ---
-
-
 
 // ::: Script para dar una pequeña animación de entrada a los elementos al ir bajando por la página :::
 var revealElements = document.querySelectorAll(".reveal");

@@ -146,7 +146,7 @@ nav img{
     z-index: 1; /* Necesito especificar esto por el gradiente al acabar la sección de HERO */
 	display: flex;
 }
-.hero-content {
+.hero-content{
     border-radius: 10px;
     padding: 90px 0;
     width: 50%;
@@ -223,6 +223,7 @@ button .down-chevron{
     width: 90%;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 .scrolling-wrapper-flexbox{
     margin-top: 10px ;
@@ -233,7 +234,7 @@ button .down-chevron{
     -webkit-overflow-scrolling: touch;
 }
 .scrolling-wrapper-flexbox:last-child{
-    margin-bottom: 90px;
+    margin-bottom: 60px;
     padding-bottom: 20px;
 }
 .scrolling-wrapper-flexbox .montadito-card{
@@ -356,6 +357,8 @@ button .down-chevron{
 /* Acá estarían los estilos del modal, iniciando con el "fondo" del mismo*/
 .modal{
     display: none;
+    justify-content: center;
+    align-items: center;  /* Para centrar al modal dentro de la pantalla */
     position: fixed;
     z-index: 3;
     left: 0;
@@ -370,7 +373,6 @@ button .down-chevron{
     max-width: 730px;
     background-color: var(--main-beige);
     border-radius: 12px;
-    margin: 12% auto; /* Para centrar al modal dentro de la pantalla */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -417,11 +419,11 @@ button .down-chevron{
         color: red;
     }
 
-    .hero-content {
+    .hero-content{
         width: 75%;
         margin: 0 auto;
     }
-    .logo-hero {
+    .logo-hero{
         width: 90%;
         margin: 0 auto;
     }
@@ -429,15 +431,15 @@ button .down-chevron{
         width: 320px;
         height: 320px;
     }
-    .call-to-action-max-w {
+    .call-to-action-max-w{
         padding: 8% 6%;
     }
     
-    .pre-footer-content {
+    .pre-footer-content{
         flex-wrap: wrap;
         row-gap: 60px;
     }
-    .pre-footer-content > * {
+    .pre-footer-content > *{
         flex-basis: 50%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
         text-align: center;
     }
@@ -458,17 +460,17 @@ button .down-chevron{
         color: blue;
     }
     
-    h1 {
+    h1{
         font-size: 2.2rem;
     }
     h2{
         font-size: 2rem;
         line-height: 1;
     }
-    .hero-content {
+    .hero-content{
         width: 100%
     }
-    .logo-hero {
+    .logo-hero{
         width: 50%;
     }
     .hero-content h1{
@@ -477,7 +479,7 @@ button .down-chevron{
     .hero-upper{
         align-items: stretch;
     }
-    .scrolling-wrapper-flexbox {
+    .scrolling-wrapper-flexbox{
         margin-top: 20px;
     }
  
@@ -485,23 +487,23 @@ button .down-chevron{
         width: 300px;
         height: 300px;
     }
-    .scrolling-wrapper-flexbox:last-child {
+    .scrolling-wrapper-flexbox:last-child{
         margin-bottom: 50px;
         padding-bottom: 20px;
     }
-    .call-to-action-max-w {
+    .call-to-action-max-w{
         padding: 8%;
         flex-direction: column;
         justify-content: space-between;
         row-gap: 30px;
     }
-    .call-left {
+    .call-left{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .call-left h2 {
+    .call-left h2{
         font-size: 1.8rem;
         text-align: center;
     }
@@ -509,10 +511,10 @@ button .down-chevron{
         padding-top: 120px;
         padding-bottom: 40px;
     }
-    .pre-footer-content ul li:first-child {
+    .pre-footer-content ul li:first-child{
         margin-top: 20px;
     }
-    .pre-footer-content > * {
+    .pre-footer-content > *{
         flex-basis: 100%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
         text-align: center;
     }
@@ -522,10 +524,10 @@ button .down-chevron{
         color: yellow;
     }
 
-    h1 {
+    h1{
         font-size: 2.2rem;
     }
-    h3 {
+    h3{
         font-size: 1.2rem;
     }
     nav{
@@ -541,7 +543,7 @@ button .down-chevron{
     .divider{
         margin: 30px auto;
     }
-    .logo-hero {
+    .logo-hero{
         width: 60%;
     }
     .btnModal span{
@@ -550,16 +552,16 @@ button .down-chevron{
     .content{
         padding-top: 60px;
     }
-    .scrolling-wrapper-flexbox {
+    .scrolling-wrapper-flexbox{
         margin-top: 0;
     }
     .montadito-card{
         width: 100%;
     }
-    .scrolling-wrapper-flexbox .montadito-card:not(:last-child) {
+    .scrolling-wrapper-flexbox .montadito-card:not(:last-child){
         margin-right: 10px;
     }
-    .scrolling-wrapper-flexbox:last-child {
+    .scrolling-wrapper-flexbox:last-child{
         margin-bottom: 10px;
         padding-bottom: 20px;
     }
