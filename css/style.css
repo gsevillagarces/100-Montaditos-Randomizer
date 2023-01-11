@@ -35,18 +35,18 @@ body{
 
 /* Estilos "generales" para poder reusarlos en el sitio */
 h1{
-    font-size: 3em;
-    line-height: 1.1;
+    font-size: 2.5em;
+    line-height: 1;
     font-weight: 700;
 }
 
 h2{
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 700;
 }
 
 h3{
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-weight: 700;
 }
 
@@ -54,14 +54,14 @@ button{
     appearance: none;
     -webkit-appearance: none;
     font-family: 'Rubik', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     cursor: pointer;
     border: none;
     background-color: var(--main-red);
     color: var(--main-white);
-    font-size: 1.2em;
-    padding: 22px 50px;
-    border-radius: 70px;
+    font-size: 1em;
+    padding: 20px 40px;
+    border-radius: 36px;
     display: flex; /* Esto para centrar el span con el texto, el span contiene un emoji que después se cambia de tamaño */
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@ button{
 }
 
 button:hover{
-    transform: translateY(-1px) scale(1.01);
+    transform: translateY(-1px) scale(1.005);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
 }
 
@@ -436,7 +436,7 @@ button .down-chevron{
 }
 
 .modal h2{
-    font-size: 2.6em;
+    font-size: 2.2em;
     margin-top: 15px;
     text-align: center;
 }
@@ -475,11 +475,18 @@ button .down-chevron{
         text-align: center;
     }
 
+    .pre-footer-content div:not(first-child){
+        padding-top: 15px;
+    }
+
     .footer-content{
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px; /* Para facilitar el espaciado entre rows y/o columns, se puede usar gap (https://developer.mozilla.org/en-US/docs/Web/CSS/gap) */
         text-align: center;
+    }
+
+    .footer-content p:not(first-child){
+        padding-top: 10px;
     }
 }
 
@@ -489,16 +496,12 @@ button .down-chevron{
     } */
     
     h1 {
-        font-size: 2.5em;
+        font-size: 2.2em;
     }
 
     h2{
         font-size: 2em;
-        line-height: 1.1;
-    }
-
-    button{
-        font-size: 1.1em;
+        line-height: 1;
     }
 
     .hero-content {
@@ -506,7 +509,7 @@ button .down-chevron{
     }
 
     .logo-hero {
-        width: 80%;
+        width: 50%;
     }
 
     .hero-content h1{
@@ -535,7 +538,7 @@ button .down-chevron{
         padding: 8%;
         flex-direction: column;
         justify-content: space-between;
-        gap: 30px;
+        row-gap: 30px;
     }
 
     .call-left {
@@ -575,11 +578,7 @@ button .down-chevron{
     }
 
     h3 {
-        font-size: 1.3em;
-    }
-
-    button{
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     nav{
@@ -587,7 +586,7 @@ button .down-chevron{
     }
 
     .logo-nav{
-        width: 50%;
+        width: 40%;
         margin: 0 auto;    
     }
 
