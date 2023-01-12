@@ -451,7 +451,7 @@ button .down-chevron{
         text-align: center;
     }
     .pre-footer-content div:not(first-child){
-        padding-top: 60px;
+        padding-top: 40px;
     }
     .footer-content{
         flex-wrap: wrap;
@@ -473,6 +473,9 @@ button .down-chevron{
     h2{
         font-size: 2rem;
         line-height: 1;
+    }
+    .logo-nav{
+        max-height: 40px;
     }
     .hero{
         height: 60vh;
@@ -515,7 +518,7 @@ button .down-chevron{
         text-align: center;
     }
     .pre-footer{
-        padding: 40px 0;
+        padding: 80px 0;
     }
     .pre-footer-content ul li:first-child{
         margin-top: 20px;
@@ -545,8 +548,7 @@ button .down-chevron{
         padding: 16px;
     }
     .logo-nav{
-        width: 40%;
-        margin: 0 auto;    
+        max-height: 30px;
     }
     .hero{
         height: 75vh;
