@@ -56,7 +56,7 @@ button{
     background-color: var(--main-red);
     color: var(--main-white);
     font-size: 1rem;
-    padding: 20px 40px;
+    padding: 20px 30px;
     border-radius: 36px;
     display: flex; /* Esto para centrar el span con el texto, el span contiene un emoji que después se cambia de tamaño */
     align-items: center;
@@ -148,7 +148,7 @@ nav img{
 }
 .hero-content{
     border-radius: 10px;
-    padding: 90px 0;
+    padding: 6% 0;
     width: 50%;
     height: 100%;
     display: flex;
@@ -286,7 +286,7 @@ button .down-chevron{
 /* Sección siguiente, pre-footer en la página */
 .pre-footer{
     background-color: var(--main-black);
-    padding: 180px 0 90px;
+    padding: 90px 0;
     margin-top: -60px;
     position: relative;
 }
@@ -306,10 +306,10 @@ button .down-chevron{
     list-style: none;
 }
 .pre-footer-content ul li:first-child{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .pre-footer-content ul li{
-    margin-top: 20px;
+    margin-top: 12px;
 }
 .pre-footer-content ul a{
     text-decoration: none;
@@ -337,7 +337,6 @@ button .down-chevron{
     justify-content: space-between;
     align-items: center;
 }
-
 .footer-content p{
     font-size: 0.9rem;
     color: var(--dark-gray);
@@ -354,7 +353,7 @@ button .down-chevron{
 }
 /* --- */
 
-/* Acá estarían los estilos del modal, iniciando con el "fondo" del mismo*/
+/* Acá estarán los estilos del modal, iniciando con el "fondo" del mismo*/
 .modal{
     display: none;
     justify-content: center;
@@ -368,7 +367,13 @@ button .down-chevron{
     overflow: auto;
     background-color: var(--dark-black-dimmed);
 }
-.modal-content{
+.modal:not(.modal-container){
+    cursor: pointer;
+}
+.modal-container{
+    cursor: default;
+}
+.modal-container{
     width: 90%;
     max-width: 730px;
     background-color: var(--main-beige);
@@ -418,14 +423,18 @@ button .down-chevron{
     body{
         color: red;
     }
-
+    .hero-max-w{
+        justify-content: center;
+    }
     .hero-content{
         width: 75%;
-        margin: 0 auto;
     }
     .logo-hero{
         width: 90%;
         margin: 0 auto;
+    }
+    .hero-content h1{
+        text-align: center;
     }
     .montadito-card{
         width: 320px;
@@ -433,18 +442,16 @@ button .down-chevron{
     }
     .call-to-action-max-w{
         padding: 8% 6%;
-    }
-    
+    }    
     .pre-footer-content{
         flex-wrap: wrap;
-        row-gap: 60px;
     }
     .pre-footer-content > *{
         flex-basis: 50%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
         text-align: center;
     }
     .pre-footer-content div:not(first-child){
-        padding-top: 15px;
+        padding-top: 60px;
     }
     .footer-content{
         flex-wrap: wrap;
@@ -467,14 +474,14 @@ button .down-chevron{
         font-size: 2rem;
         line-height: 1;
     }
+    .hero{
+        height: 60vh;
+    }
     .hero-content{
         width: 100%
     }
     .logo-hero{
         width: 50%;
-    }
-    .hero-content h1{
-        text-align: center;
     }
     .hero-upper{
         align-items: stretch;
@@ -495,21 +502,20 @@ button .down-chevron{
         padding: 8%;
         flex-direction: column;
         justify-content: space-between;
-        row-gap: 30px;
     }
     .call-left{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 30px;
     }
     .call-left h2{
         font-size: 1.8rem;
         text-align: center;
     }
     .pre-footer{
-        padding-top: 120px;
-        padding-bottom: 40px;
+        padding: 40px 0;
     }
     .pre-footer-content ul li:first-child{
         margin-top: 20px;
@@ -518,17 +524,22 @@ button .down-chevron{
         flex-basis: 100%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
         text-align: center;
     }
+    .modal{
+        align-items: flex-start;
+    }
+    .modal-container{
+        margin-top: 6%;
+    }
 }
 @media screen and (max-width: 320px){
     body{
         color: yellow;
     }
-
     h1{
         font-size: 2.2rem;
     }
     h3{
-        font-size: 1.2rem;
+          font-size: 1.2rem;
     }
     nav{
         padding: 16px;
