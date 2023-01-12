@@ -14,6 +14,22 @@ function showNav() {
 window.addEventListener("scroll", showNav);
 // ---
 
+// ::: Script para poner un fondo de img en el hero de manera aleatoria :::
+var totalCount = 3;
+const hero = document.querySelector(".hero");
+
+console.log(hero);
+
+function changeBG() {
+    var num = Math.ceil( Math.random() * totalCount );
+    console.log(num);
+    hero.style.backgroundImage = 'url(imgs/bg'+num+'.jpg';
+    
+}
+
+window.addEventListener("load", changeBG);
+// ---
+
 // ::: Script para controlar el MODAL :::
 var modal = document.querySelector(".modal");
 var btn = document.querySelectorAll(".btnModal");
@@ -48,3 +64,4 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+// ---

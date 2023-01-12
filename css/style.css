@@ -121,10 +121,9 @@ nav img{
     height: 90vh;
     min-height: 860px;
     max-height: 1080px; /* Quiero que el contenido no crezca infinitamente en lo alto, en monitores de muy alta resoulución */
-    background: url(../imgs/bg.jpg) #F5EEE2 center center no-repeat;
+    background: #F5EEE2 center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,7 +149,6 @@ nav img{
     border-radius: 10px;
     padding: 6% 0;
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -286,7 +284,7 @@ button .down-chevron{
 /* Sección siguiente, pre-footer en la página */
 .pre-footer{
     background-color: var(--main-black);
-    padding: 90px 0;
+    padding: 120px 0 90px;
     margin-top: -60px;
     position: relative;
 }
@@ -357,7 +355,7 @@ button .down-chevron{
 .modal{
     display: none;
     justify-content: center;
-    align-items: center;  /* Para centrar al modal dentro de la pantalla */
+    align-items: flex-start;  /* Para posicionar al modal dentro de la pantalla */
     position: fixed;
     z-index: 3;
     left: 0;
@@ -376,6 +374,7 @@ button .down-chevron{
 .modal-container{
     width: 90%;
     max-width: 730px;
+    margin-top: 6%;
     background-color: var(--main-beige);
     border-radius: 12px;
     display: flex;
@@ -478,7 +477,7 @@ button .down-chevron{
         max-height: 40px;
     }
     .hero{
-        height: 60vh;
+        min-height: auto;
     }
     .hero-content{
         width: 100%
@@ -526,12 +525,6 @@ button .down-chevron{
     .pre-footer-content > *{
         flex-basis: 100%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
         text-align: center;
-    }
-    .modal{
-        align-items: flex-start;
-    }
-    .modal-container{
-        margin-top: 6%;
     }
 }
 @media screen and (max-width: 320px){
