@@ -243,10 +243,46 @@ button .down-chevron{
 }
 .montadito-card{
     width: 350px;
-    height: 350px;
     border-radius: 10px;
     background: var(--main-white);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+.montadito-card .img-montadito{
+    width: 100%;
+}
+.montadito-card .info{
+    text-align: center;
+    color: var(--dark-black-dimmed);
+    opacity: 0.5;
+}
+.montadito-card h2{
+    text-align: left;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.montadito-card .description{
+    font-size: 1.1em;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+.montadito-card .semi-bold{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.montadito-card .description::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 12px;
+    width: 100%;
+    background-image: linear-gradient(to top, var(--main-white), transparent); /* Este es un gradiente que se pondrá sobre la img de fondo, abajo, para crear una transición al resto del sitio */
 }
 .scrolling-wrapper-flexbox::-webkit-scrollbar{
     display: none;
@@ -491,10 +527,9 @@ button .down-chevron{
     .scrolling-wrapper-flexbox{
         margin-top: 20px;
     }
- 
     .montadito-card{
         width: 300px;
-        height: 300px;
+        padding: 2% 6%;
     }
     .scrolling-wrapper-flexbox:last-child{
         margin-bottom: 50px;
