@@ -136,7 +136,7 @@ nav img{
     left: 0;
     width: 100%;
     height: 30%;
-    background-image: linear-gradient(to top, var(--main-beige), transparent); /* Este es un gradiente que se pondrá sobre la img de fondo, abajo, para crear una transición al resto del sitio */
+    background-image: linear-gradient(to top, var(--main-beige), rgba(255, 255, 255, 0)); /* Este es un gradiente que se pondrá sobre la img de fondo, abajo, para crear una transición al resto del sitio */
 }
 .hero-max-w{
     width: 90%;
@@ -190,7 +190,7 @@ nav img{
     justify-content: space-between;
 }
 button.btn-more{
-    background-color: transparent; /* Es necesario sobreescribir el color de fondo, la sombra y el padding de este botón en específico, ya que no es un btn primario */
+    background-color: rgba(255, 255, 255, 0); /* Es necesario sobreescribir el color de fondo, la sombra y el padding de este botón en específico, ya que no es un btn primario */
     box-shadow: none;
     padding: 0;
 }
@@ -282,7 +282,7 @@ button .down-chevron{
     left: 0;
     height: 12px;
     width: 100%;
-    background-image: linear-gradient(to top, var(--main-white), transparent); /* Este es un gradiente que se pondrá sobre la img de fondo, abajo, para crear una transición al resto del sitio */
+    background-image: linear-gradient(to top, var(--main-white), rgba(255, 255, 255, 0)); /* Este es un gradiente que se pondrá sobre la img de fondo, abajo, para crear una transición al resto del sitio */
 }
 .scrolling-wrapper-flexbox::-webkit-scrollbar{
     display: none;
