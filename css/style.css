@@ -559,7 +559,7 @@ button .down-chevron{
         margin-top: 20px;
     }
     .pre-footer-content > *{
-        flex-basis: 100%; /* Acá el hack usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
+        flex-basis: 100%; /* Acá el "hack" usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
         text-align: center;
     }
 }
