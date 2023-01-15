@@ -22,9 +22,7 @@ console.log(hero);
 
 function changeBG() {
     var num = Math.ceil( Math.random() * totalCount );
-    console.log(num);
     hero.style.backgroundImage = 'url(imgs/bg'+num+'.jpg';
-    
 }
 
 window.addEventListener("load", changeBG);
@@ -44,6 +42,25 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+// ---
+
+// ::: Script para mostrar número e img de montadito dentro del MODAL :::
+var montaditoImg = document.querySelector(".img-select-montadito");
+var montaditoTxt = document.querySelector(".num-select-montadito");
+var btnMontaditoRdm = document.querySelectorAll(".btnRdm");
+
+let montaditos = {
+    imgs : ["img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8", "img9", "img10", "img11", "img12", "img13", "img14", "img15", "img16", "img17", "img18", "img19", "img20", "img21", "img22", "img23", "img24", "img25"],
+    nums : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
+};
+
+function montaditoRandom (){
+    let montRand = Math.floor((Math.random() * montaditos.imgs.length) + 1);
+    montaditoImg.src = 'imgs/montaditos/montadito'+montRand+'.png';
+    montaditoTxt.innerHTML ='#'+montRand;
+}
+
+btnMontaditoRdm.forEach(boton => boton.addEventListener("click", montaditoRandom));
 // ---
 
 // ::: Script para dar una pequeña animación de entrada a los elementos al ir bajando por la página :::

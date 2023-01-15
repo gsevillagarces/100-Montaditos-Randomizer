@@ -457,9 +457,6 @@ button .down-chevron{
     text-align: center;
 }
 @media screen and (max-width: 961px){
-    body{
-        color: red;
-    }
     .hero-max-w{
         justify-content: center;
     }
@@ -506,10 +503,6 @@ button .down-chevron{
     }
 }
 @media screen and (max-width: 641px){
-    body{
-        color: blue;
-    }
-    
     h1{
         font-size: 2.2rem;
     }
@@ -571,9 +564,6 @@ button .down-chevron{
     }
 }
 @media screen and (max-width: 320px){
-    body{
-        color: yellow;
-    }
     h1{
         font-size: 2.2rem;
     }
@@ -618,3 +608,19 @@ button .down-chevron{
         font-size: 0.9rem;
     }
 }
+
+/* @media screen and (max-width: 961px){
+    body{
+        color: red;
+    }
+}
+@media screen and (max-width: 641px){
+    body{
+        color: blue;
+    }
+}
+@media screen and (max-width: 320px){
+    body{
+        color: yellow;
+    }
+} */
