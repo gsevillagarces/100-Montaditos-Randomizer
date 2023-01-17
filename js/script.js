@@ -82,3 +82,35 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 // ---
+
+
+// ::: Alternativa de interacción con el slider de montaditos. Adaptación de un sctipt que funciona con los mouse events. Tomado de https://codepen.io/thenutz/pen/VwYeYEE :::
+const slider = document.querySelectorAll(".scrolling-wrapper-flexbox");
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.forEach(slider => {
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('dragged');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('dragged');
+    });
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('dragged');
+    });
+    slider.addEventListener('mousemove', (e) => {
+        if(!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const speed = (x - startX) * 1; //velocidad de scroll
+        slider.scrollLeft = scrollLeft - speed;
+    });
+});
+// ---
