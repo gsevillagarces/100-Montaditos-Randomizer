@@ -436,24 +436,37 @@ button .down-chevron{
     transform: translateY(-1px) scale(1.1);
 }
 .montadito-circle{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 300px;
     background-color: var(--main-white);
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 40px auto;
+}
+.img-select-montadito-container{
+    height: 190px;
+    width: 150%; /* Creo un efecto de máscara para solo mostar la imagen horizontal */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-select-montadito{
+    width: 100%;
 }
 .modal p{
     color: var(--dark-black-dimmed);
     opacity: 0.5;
+    margin-top: 5px;
 }
-.modal h2{
-    font-size: 2.2rem;
-    margin-top: 15px;
+.modal .num-select-montadito{
+    font-size: 3.5rem;
+    margin-top: 20px;
     text-align: center;
 }
 @media screen and (max-width: 961px){
