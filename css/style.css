@@ -557,14 +557,14 @@ button .down-chevron{
         align-items: stretch;
     }
     .scrolling-wrapper-flexbox{
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .montadito-card{
         width: 300px;
         padding: 2% 6%;
     }
     .scrolling-wrapper-flexbox:last-child{
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         padding-bottom: 20px;
     }
     .call-to-action-max-w{
