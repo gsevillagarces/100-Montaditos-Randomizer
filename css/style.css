@@ -234,10 +234,10 @@ button .down-chevron{
     -webkit-overflow-scrolling: touch;
 }
 .scrolling-wrapper-flexbox .montadito-card{
-    transition: all 0.2s;
     transform: scale(0.98);
     user-select: none; /* Para no interferir con el drag de la navegación */
     cursor: pointer;
+    transition: all 0.2s;
 }
 .scrolling-wrapper-flexbox.dragged .montadito-card{
     cursor: grabbing;
@@ -280,13 +280,13 @@ button .down-chevron{
     margin-bottom: 0;
 }
 .montadito-card .description{
-    font-size: 1.1em;
+    font-size: 1.1rem;
     height: 60px;
     overflow: hidden;
     position: relative;
 }
 .montadito-card .semi-bold{
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 .montadito-card .description::after{
@@ -370,6 +370,54 @@ button .down-chevron{
 }
 /* --- */
 
+/* Sección siguiente, easter egg en la página */
+.easter-egg{
+    background-color:var(--main-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+.easter-egg-max-w{
+    width: 90%;
+    max-width: 1140px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
+    border-top: 1px solid var(--dark-black-dimmed);
+    padding: 10px 0;
+    color: var(--main-beige);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.8s;
+}
+.easter-egg h3{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    transition: all 0.8s;
+}
+.easter-egg img{
+    transform: scale(0.75);
+    transition: all 0.8s;
+}
+.easter-egg:hover{
+    background-color:var(--main-red);
+    transition: all 0.8s;
+}
+.easter-egg:hover .easter-egg-max-w{
+    border-top: 1px solid transparent;
+    padding: 30px 0;
+}
+.easter-egg:hover h3{
+    transform: scale(1.5);
+    transition: all 0.8s;
+}
+.easter-egg:hover img{
+    transform: scale(1);
+    transition: all 0.8s;
+}
+/* --- */
+
 /* Sección siguiente, footer en la página */
 .footer{
     background-color: var(--dark-black);
@@ -439,7 +487,6 @@ button .down-chevron{
     top: 20px;
     right: 20px;
     opacity: 1;
-    font-size: 28px;
 }
 .modal-close:hover,
 .modal-close:focus{
@@ -593,6 +640,14 @@ button .down-chevron{
         flex-basis: 100%; /* Acá el "hack" usado en desktop pierde un poco su utilidad, ya que toca dividirlo "manualmente". En este caso, quiero la mitad del ancho para cada col */
         text-align: center;
     }
+    .modal-container{ /* Quiero mostrar el modal como se muestra normalmente en dispositivos móviles. Como una bandeja en la parte inferior. */
+        width: 100%;
+        padding: 90px 30px;
+        position: absolute;
+        bottom: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 }
 @media screen and (max-width: 320px){
     h1{
@@ -640,6 +695,7 @@ button .down-chevron{
     }
 }
 
+/* Uso estos colores para guiarme al momento de hacer el diseño responsive. Saber en qué punto hacer los fixes. Los activo y desactivo (comento) a conveniencia */
 /* @media screen and (max-width: 961px){
     body{
         color: red;
