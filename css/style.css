@@ -776,7 +776,6 @@ a.float-rdm {
         font-size: 0.9rem;
     }
 }
-
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -785,7 +784,6 @@ a.float-rdm {
         opacity: 1;
      }
 }
-
 @keyframes fadeInAnimationMove {
     0% {
         transform: translateY(40px);
@@ -800,7 +798,6 @@ a.float-rdm {
         opacity: 1;
     }
 }
-
 /* Uso estos colores para guiarme al momento de hacer el diseño responsive. Saber en qué punto hacer los fixes. Los activo y desactivo (comento) a conveniencia */
 /* @media screen and (max-width: 961px){
     body{

@@ -72,7 +72,7 @@ body{
 .montadito.visible{
     opacity: 1;
     filter: saturate(100%);
-    transition: all 1s ease-in;
+    transition: all 0.4s ease-in;
 }
 .montadito-img{
     width: 30vh;
@@ -146,8 +146,8 @@ a{
     display: inline-block;
     position: relative;
     text-align: center;
-    font-size: 2.4vh;
-    padding: 2vh 3vh;
+    font-size: 2.2vh;
+    padding: 2.5vh;
     font-family: 'Press Start 2P', cursive;
     text-decoration: none;
     color: #05012B;
