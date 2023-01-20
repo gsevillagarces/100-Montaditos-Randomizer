@@ -315,6 +315,9 @@ button .down-chevron{
 /* --- */
 
 /* Estilos para tarjeta secreta "Randomizer" */
+.scrolling-wrapper-flexbox .montadito-card.rdm-card{
+    cursor: url('../imgs/rdm/cursor.png'), auto;
+}
 .rdm-card{
     background: url("../imgs/rdm/bg2.jpg") center center repeat;
     background-size: 100vh;
@@ -325,6 +328,7 @@ button .down-chevron{
 .rdm-card a{
     text-decoration: none;
     color: #c8edd7;
+    cursor: url('../imgs/rdm/cursor.png'), auto;
 }
 .rdm-card .img-montadito{
     width: 18vh;
