@@ -586,12 +586,12 @@ a.generator{
     margin-top: 10px;
     text-align: center;
 }
-.float{
+.float-rdm{
 	position:fixed;
-	width: 90px;
-	height: 90px;
-    bottom: 3vh;
-    right: 3vh;
+	width: 80px;
+	height: 80px;
+    bottom: 2vh;
+    right: 2vh;
 	border-radius:50%;
     border: 3pt solid var(--main-white);
     display: flex;
@@ -601,7 +601,10 @@ a.generator{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
     z-index: 2;
 }
-a.float {
+.float-rdm h2{
+    font-size: 38px;
+}
+a.float-rdm {
     text-decoration: none;
 }
 /* Media queries para adaptar elementos en responsive */
