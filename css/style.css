@@ -309,6 +309,41 @@ button .down-chevron{
 }
 /* --- */
 
+/* Estilos para tarjeta secreta "Randomizer" */
+.rdm-card{
+    background: url("../imgs/rdm/bg2.jpg") center center repeat;
+    background-size: 100vh;
+    font-family: 'Press Start 2P', monospace;
+    align-items: center;
+    box-shadow: inset 0 0 10px 1vh #2ECC71;
+}
+.rdm-card a{
+    text-decoration: none;
+    color: #2ECC71;
+}
+.rdm-card .img-montadito{
+    width: 18vh;
+}
+.rdm-card h2{
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.rdm-card p.description-rdm{
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+.rdm-card:hover{
+    box-shadow: inset 0 0 16px 1vh #2ECC71;
+    transition: all 0.3s;
+}
+.rdm-card:hover .img-montadito{
+    width: 20vh;
+    transition: all 0.3s;
+}
+/* --- */
+
 /* Sección siguiente, call to action en la página */
 .call-to-action{
     background-color: var(--main-beige);
@@ -412,10 +447,15 @@ a.generator{
 }
 .easter-egg h3{
     font-family: 'Press Start 2P', monospace;
+    text-align: center;
     font-size: 0.8rem;
+    line-height: 1.3rem;
     color: var(--dark-gray);
     z-index: 1;
     transition: all 3s ease-in-out;
+}
+.easter-egg h3 span{
+    font-weight: bold;
 }
 .easter-egg .hidden{
     opacity: 0.35;
@@ -546,6 +586,24 @@ a.generator{
     margin-top: 10px;
     text-align: center;
 }
+.float{
+	position:fixed;
+	width: 90px;
+	height: 90px;
+    bottom: 3vh;
+    right: 3vh;
+	border-radius:50%;
+    border: 3pt solid var(--main-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-beige);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+a.float {
+    text-decoration: none;
+}
+/* Media queries para adaptar elementos en responsive */
 @media screen and (max-width: 961px){
     .hero-max-w{
         justify-content: center;

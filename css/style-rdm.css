@@ -51,9 +51,9 @@ body{
     align-items: center;
     justify-content: space-evenly;
     opacity: 0;
-    animation: fadeInAnimation ease 8s;
+    animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 .logo-100{
@@ -91,8 +91,8 @@ a{
     background: #CE372B;
     display: inline-block;
     position: absolute;
-    top: 4vh;
-    right: 4vh;
+    top: 3vh;
+    right: 3vh;
     text-align: center;
     font-size: 2vh;
     padding: 2vh;
@@ -103,7 +103,7 @@ a{
     opacity: 0;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 .btn-close:hover,
