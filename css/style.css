@@ -599,6 +599,7 @@ a.generator{
     justify-content: center;
     background: var(--main-beige);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+    z-index: 2;
 }
 a.float {
     text-decoration: none;
