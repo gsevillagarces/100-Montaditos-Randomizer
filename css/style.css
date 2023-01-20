@@ -320,14 +320,15 @@ button .down-chevron{
     background-size: 100vh;
     font-family: 'Press Start 2P', monospace;
     align-items: center;
-    box-shadow: inset 0 0 10px 1vh #2ECC71;
+    box-shadow: inset 0 0 10px 1vh #36c9ff;
 }
 .rdm-card a{
     text-decoration: none;
-    color: #2ECC71;
+    color: #c8edd7;
 }
 .rdm-card .img-montadito{
     width: 18vh;
+    max-width: 220px;
 }
 .rdm-card h2{
     font-size: 1.2em;
@@ -340,7 +341,7 @@ button .down-chevron{
     line-height: 1rem;
 }
 .rdm-card:hover{
-    box-shadow: inset 0 0 16px 1vh #2ECC71;
+    box-shadow: inset 0 0 16px 1vh #36c9ff;
     transition: all 0.3s;
 }
 .rdm-card:hover .img-montadito{
@@ -421,10 +422,10 @@ a.generator{
     text-decoration: none;
 }
 .easter-egg{
+    cursor: url('../imgs/rdm/cursor.png'), auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     position: relative;
     background-color: var(--dark-black);
 }

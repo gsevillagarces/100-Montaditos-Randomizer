@@ -7,7 +7,7 @@ let montaditos = {
     nums : []
 };
 
-for (var i = 1; i <= 40; i++) {
+for (var i = 1; i <= 100; i++) { // Aquí sí pongo 100, porque no cargo imagenes
     montaditos.nums.push(i)
 }
 
