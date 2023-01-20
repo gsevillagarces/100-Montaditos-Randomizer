@@ -126,6 +126,10 @@ nav img{
     align-items: center;
     justify-content: center;
     position: relative;
+    transform: translateY(0);
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .hero::before{
     content: "";
@@ -151,6 +155,12 @@ nav img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translateY(0);
+    animation: fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .left-cont{
     padding: 60px 8% 2%;
@@ -371,49 +381,55 @@ a.generator{
     text-decoration: none;
 }
 .easter-egg{
-    background-color:var(--main-black);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.8s;
+    position: relative;
+    background-color: var(--dark-black);
+}
+.easter-egg::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: var(--main-black) url("../imgs/rdm/bg2.jpg") center center repeat;
+    background-size: 90vh;
+    transition: all 3s ease-in-out;
 }
 .easter-egg-max-w{
     width: 90%;
     max-width: 1140px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px 0;
-    color: var(--main-beige);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    transition: all 0.8s;
 }
 .easter-egg h3{
     font-family: 'Press Start 2P', monospace;
-    font-size: 1rem;
-    transition: all 0.8s;
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    z-index: 1;
+    transition: all 3s ease-in-out;
 }
-.easter-egg img{
-    transform: scale(0.75);
-    transition: all 0.8s;
+.easter-egg .hidden{
+    opacity: 0.35;
+    font-size: 0.8rem;
 }
-.easter-egg:hover{
-    background-color:var(--main-red);
-    transition: all 0.8s;
+.easter-egg:hover::after{
+    background: url("../imgs/rdm/bg2.jpg") center center repeat;
+    background-size: 120vh;
+    opacity: 1;
 }
-.easter-egg:hover .easter-egg-max-w{
-    border-top: 1px solid transparent;
-    padding: 30px 0;
-}
-.easter-egg:hover h3{
-    transform: scale(1.5);
-    transition: all 0.8s;
-}
-.easter-egg:hover img{
-    transform: scale(1);
-    transition: all 0.8s;
+.easter-egg:hover .hidden{
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    color: #28B463;
 }
 /* --- */
 
@@ -692,6 +708,17 @@ a.generator{
     .footer-content p{
         font-size: 0.9rem;
     }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-10px);
+        opacity: 1;
+     }
 }
 
 /* Uso estos colores para guiarme al momento de hacer el diseño responsive. Saber en qué punto hacer los fixes. Los activo y desactivo (comento) a conveniencia */

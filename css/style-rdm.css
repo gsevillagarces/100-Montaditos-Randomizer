@@ -24,16 +24,25 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .bgUp{
     height: 25vh;
     background: url("../imgs/rdm/bg1.jpg") center bottom repeat-x;
     background-size: auto 100%;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .bgBtm{
     height: 25vh;
     background: url("../imgs/rdm/bg3.jpg") center top repeat-x;
     background-size: auto 100%;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .contenido{
     height: 100vh;
@@ -41,6 +50,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    opacity: 0;
+    animation: fadeInAnimation ease 8s;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
 .logo-100{
     width: 30vh;
@@ -86,6 +100,11 @@ a{
     text-decoration: none;
     color: #fff;
     box-shadow: inset -1vh -1vh 0 0 #67120C;
+    opacity: 0;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
 }
 .btn-close:hover,
 .btn-close:focus{
@@ -155,6 +174,14 @@ a{
     top: 0;
     border-left: 1vh #D5F5E3 solid;
     border-right: 1vh #D5F5E3 solid;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
 @keyframes float1 {
 	0% {
