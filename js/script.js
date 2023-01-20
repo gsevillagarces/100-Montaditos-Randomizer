@@ -18,8 +18,6 @@ window.addEventListener("scroll", showNav);
 var totalCount = 3;
 const hero = document.querySelector(".hero");
 
-console.log(hero);
-
 function changeBG() {
     var num = Math.ceil( Math.random() * totalCount );
     hero.style.backgroundImage = 'url(imgs/bg'+num+'.jpg';

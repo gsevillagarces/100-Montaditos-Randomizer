@@ -12,7 +12,7 @@ html{
 :root{
     --main-black: #333;
     --dark-black: #000;
-    --dark-black-dimmed: rgba(0, 0, 0, 0.65);    
+    --dark-black-dimmed: rgba(0, 0, 0, 0.65);
     --dark-gray: #707070;
     --main-red: #CB4A4A;
     --main-white: #fff;
@@ -72,10 +72,6 @@ button:hover{
 button span{
     font-size: 1.5rem;
     margin-left: 5px;
-}
-a{
-    text-decoration: underline;
-    color: var(--main-red);
 }
 /* --- */
 
@@ -371,6 +367,9 @@ button .down-chevron{
 /* --- */
 
 /* Sección siguiente, easter egg en la página */
+a.generator{
+    text-decoration: none;
+}
 .easter-egg{
     background-color:var(--main-black);
     display: flex;
@@ -382,8 +381,8 @@ button .down-chevron{
 .easter-egg-max-w{
     width: 90%;
     max-width: 1140px;  /* Quiero que el contenido no crezca infinitamente en lo ancho, en monitores de muy alta resoulución */
-    border-top: 1px solid var(--dark-black-dimmed);
-    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
     color: var(--main-beige);
     display: flex;
     flex-direction: row;
@@ -555,7 +554,7 @@ button .down-chevron{
     .img-select-montadito-container{
         width: 120%;
     }
-    .scrolling-wrapper-flexbox:last-child {
+    .scrolling-wrapper-flexbox:last-child{
         margin-bottom: 40px;
     }
     .call-to-action-max-w{
