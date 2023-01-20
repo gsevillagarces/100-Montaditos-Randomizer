@@ -4,6 +4,14 @@
     box-sizing: border-box;
     font-size: 15px;
 }
+
+/* Un toque de personalización */
+::selection{
+    background-color: #2ECC71;
+    color: #000;
+}
+/* --- */
+
 body{
     cursor: url('../imgs/rdm/cursor.png'), auto;
     font-family: 'Press Start 2P', monospace;
@@ -66,6 +74,7 @@ body{
     text-align: center;
     font-size: 2vh;
     line-height: 2.6vh;
+    width: 90vw;
     max-width: 60vh;
 	animation: float3 8s ease-in-out infinite;
 }
