@@ -17,7 +17,7 @@ function montaditoRandom (){
     montaditoTxt.innerHTML ='#'+montRand;
 
     // En esta linea estoy seguro que se puede optimizar el llamado para que se de solo la primera vez del click
-    document.getElementById("btnRdm").innerHTML="RE-randomize!"
+    document.getElementById("btnRdm").innerHTML="RE-randomize!";
 }
 
 btnMontaditoRdm.forEach(boton => boton.addEventListener("click", montaditoRandom));

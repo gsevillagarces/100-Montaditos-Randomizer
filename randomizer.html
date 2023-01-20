@@ -27,7 +27,8 @@
         </div>
     </div>
     <button>
-        <a href="index.html" class="btn-close">X</a>
+        <!-- Simulo un back con el botón, para mantener la posición del scroll, antes de salir a randomizer -->
+        <a href="javascript:history.back(1)" class="btn-close">X</a>
     </button>
     <div class="contenido">
         <img class="logo-100" src="imgs/rdm/logo.png" alt="">
@@ -36,7 +37,8 @@
             <h4 class="montadito-num">NaN</h4>
         </div>
         <button>
-            <a href="#" class="btn" id="btnRdm">Randomizeeee!</a>
+            <!-- Necesario un void para que no hayan clicks "vacíos" y el back pueda funcionar siempre -->
+            <a href="javascript:void(0)" class="btn" id="btnRdm">Randomizeeee!</a>
         </button>
     </div>
 <script type="text/javascript" src="js/script-rdm.js"></script>
