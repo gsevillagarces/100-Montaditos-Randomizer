@@ -126,7 +126,6 @@ nav img{
     align-items: center;
     justify-content: center;
     position: relative;
-    transform: translateY(0);
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -171,6 +170,10 @@ nav img{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transform: translateY(0);
+    animation: fadeInAnimationMove ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .hero-upper{
     display: flex;
@@ -773,6 +776,15 @@ a.float-rdm {
 }
 
 @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes fadeInAnimationMove {
     0% {
         transform: translateY(0);
         opacity: 0;
