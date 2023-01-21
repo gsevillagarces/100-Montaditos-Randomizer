@@ -781,6 +781,7 @@ a.float-rdm {
         font-size: 0.9rem;
     }
 }
+/* Solo para animar la opacidad */
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -789,6 +790,7 @@ a.float-rdm {
         opacity: 1;
      }
 }
+/* Para animar opacidad y movimiento */
 @keyframes fadeInAnimationMove {
     0% {
         transform: translateY(40px);
@@ -804,7 +806,7 @@ a.float-rdm {
     }
 }
 /* Uso estos colores para guiarme al momento de hacer el diseño responsive. Saber en qué punto hacer los fixes. Los activo y desactivo (comento) a conveniencia */
-/* @media screen and (max-width: 961px){
+@media screen and (max-width: 961px){
     body{
         color: red;
     }
@@ -818,4 +820,4 @@ a.float-rdm {
     body{
         color: yellow;
     }
-} */
+}
