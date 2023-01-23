@@ -30,9 +30,10 @@
         <!-- Simulo un back con el botón, para mantener la posición del scroll, antes de salir a randomizer -->
         <a href="javascript:history.back(1)" class="btn-close">X</a>
     </button>
+    <!-- El contenido de este mini sitio no es extenso, por lo que en número de elementos, son pocos, modificados en su mayoría con css -->
     <div class="contenido">
         <img class="logo-100" src="imgs/rdm/logo.png" alt="">
-        <h3 class="montadito-intro">Bienvenido al poderoso <span class="no-wrap">8-bit</span> randomizer</h3>
+        <h3 class="montadito-intro">Bienvenido al poderoso <span class="no-wrap">8-bit</span> <!-- Acá quiero que el span nunca se divida, que se mantenga junto --> randomizer</h3>
         <div class="montadito">
             <img class="montadito-img" src="imgs/rdm/montadito.png" alt="">
             <h4 class="montadito-num">NaN</h4>
@@ -42,6 +43,7 @@
             <a href="javascript:void(0)" class="btn" id="btnRdm">Randomizeeee!</a>
         </button>
     </div>
+<!-- Preferí independizar el js, y el css (en el head) para no tener conflictos entre los dos sitios -->
 <script type="text/javascript" src="js/script-rdm.js"></script>
 </body>
 </html>

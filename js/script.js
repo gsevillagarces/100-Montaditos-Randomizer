@@ -111,7 +111,7 @@ slider.forEach(slider => {
         if(!isDown) return;
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
-        const speed = (x - startX) * 1.1; //velocidad de scroll
+        const speed = (x - startX) * 1.1; //velocidad del scroll horizontal
         slider.scrollLeft = scrollLeft - speed;
     });
 });

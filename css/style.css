@@ -806,7 +806,7 @@ a.float-rdm {
     }
 }
 /* Uso estos colores para guiarme al momento de hacer el diseño responsive. Saber en qué punto hacer los fixes. Los activo y desactivo (comento) a conveniencia */
-@media screen and (max-width: 961px){
+/* @media screen and (max-width: 961px){
     body{
         color: red;
     }
@@ -820,4 +820,4 @@ a.float-rdm {
     body{
         color: yellow;
     }
-}
+} */
