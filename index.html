@@ -49,6 +49,7 @@
         </div>
     </section>
 <!-- Sección con el "mosaico de opciones" de montaditos -->
+<!-- En principio pensé llenar toda esta información tomándola de un json o un txt externo, pero pensándolo bien, igual iba a escribir una cantidad similar de texto, y no iba a variarla nunca. De esta forma la tengo visualmente en el HTML -->
     <section id="opciones" class="content">
         <div class="content-w reveal">
             <h2>Son muuuuuchas opciones para elegir...</h2>
@@ -485,6 +486,7 @@
                 <h2>¿Te ha costado decidirte por uno?</h2>
                 <button class="btnModal btnRdm">Que el destino elija por mí <span class="emoji">&#129310;</span></button>
             </div>
+            <!-- Dividido en 2 para en mobile poder adaptarlo mejor -->
             <div class="call-right">
                 <img src="imgs/montadito-call-to-action.png" alt="Montadito botón">
             </div>
@@ -563,7 +565,7 @@
         <button class="btnRdm">Volver a invocar a la suerte <span class="emoji">&#129310;</span></button>
     </div>
 </div>
-<!-- Modal con el principal feature de la página: el montadito randomizado -->
+<!-- Un fab (float action button) para "invocar" el mini sitio del randomizer en 8-bits -->
 <a href="randomizer.html" class="float-rdm">
     <h2>👾</h2>
 </a>
